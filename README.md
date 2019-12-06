@@ -2,9 +2,7 @@
  
 тест акторсов на классах-компонентах. 
 
--настройки дефолтные для IL2CPP только включена галка на GC experimental
--строчка scripting define все эти настройки в tools->Actors меню эдитора можно отключить\включить
-ACTORS_TAGS_6;
+-настройки дефолтные для IL2CPP только включена галка на GC experimental. строчка scripting define ACTORS_TAGS_6; (все эти настройки в tools->Actors меню эдитора можно отключить\включить)
 
 
 -- тест MonoBehaviour sequential поставить самой верхней в билде сцену TestMono
