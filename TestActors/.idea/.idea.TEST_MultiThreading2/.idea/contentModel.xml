@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Begemoty\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Begemoty\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TEST_MultiThreading2.-1008134270.00" t="ExcludeRecursive" />
+    <e p="D:\[Projects]\TEST_MultiThreading2" t="IncludeRecursive">
+      <e p="Assets" t="Include">
+        <e p="[namespace Common]" t="Include">
+          <e p="[Common]" t="Include">
+            <e p="Chief" t="Include">
+              <e p="Chief.cs" t="Include" />
+              <e p="ComponentChief.cs" t="Include" />
+              <e p="ComponentChiefDataSaveLoad.cs" t="Include" />
+            </e>
+            <e p="ComponentDebug.cs" t="Include" />
+            <e p="ProcessorAI.cs" t="Include" />
+          </e>
+          <e p="ActorPawnInSignal.cs" t="Include" />
+          <e p="arr.cs" t="Include" />
+          <e p="Common" t="Include">
+            <e p="ComponentCollider.cs" t="Include" />
+            <e p="ComponentModelMount.cs" t="Include" />
+            <e p="ComponentMove.cs" t="Include" />
+            <e p="ComponentMoveBezier.cs" t="Include" />
+            <e p="ComponentObject.cs" t="Include" />
+            <e p="ComponentParentChildBro.cs" t="Include" />
+            <e p="ComponentParentConstraint.cs" t="Include" />
+            <e p="ComponentTweener.cs" t="Include" />
+            <e p="ComponentWorker.cs" t="Include" />
+            <e p="ProcessingMoveRb.cs" t="Include" />
+            <e p="ProcessorClearingEntitiesAtEndFrame.cs" t="Include" />
+            <e p="ProcessorCollidersCalculation.cs" t="Include" />
+            <e p="ProcessorMove.cs" t="Include" />
+            <e p="ProcessorMoveBezier.cs" t="Include" />
+            <e p="ProcessorParentChildBro.cs" t="Include" />
+            <e p="ProcessorUpdateObject.cs" t="Include" />
+          </e>
+          <e p="ProcessorBuffersDebug.cs" t="Include" />
+          <e p="ProcessorChiefAndWorkers.cs" t="Include" />
+          <e p="StarterBase.cs" t="Include" />
+          <e p="StaticDebugMethods.cs" t="Include" />
+          <e p="StaticMathematics.cs" t="Include" />
+          <e p="StaticParentConstraint.cs" t="Include" />
+        </e>
+        <e p="[namespace SpatialPartition]" t="Include">
+          <e p="ComponentGridChief.cs" t="Include" />
+          <e p="ComponentGridSector.cs" t="Include" />
+          <e p="ComponentGridWorker.cs" t="Include" />
+          <e p="ProcessorGrid.cs" t="Include" />
+          <e p="ProcessorGridColliders.cs" t="Include" />
+          <e p="StaticGrid.cs" t="Include" />
+        </e>
+        <e p="[namespace TO_new]" t="Include">
+          <e p="ComponentCanvas.cs" t="Include" />
+          <e p="ComponentMoveDirection.cs" t="Include" />
+          <e p="ComponentMoveRbImpulse.cs" t="Include" />
+          <e p="ComponentPhys.cs" t="Include" />
+          <e p="ModelDebugID.cs" t="Include" />
+          <e p="ServiceFramework.cs" t="Include" />
+          <e p="Signals.cs" t="Include" />
+        </e>
+        <e p="ComponentChiefDataMap.cs" t="Include" />
+        <e p="ComponentMoveBezier_actorsParallel.cs" t="Include" />
+        <e p="ComponentMoveBezier_noJob.cs" t="Include" />
+        <e p="ComponentWorkerDataMap.cs" t="Include" />
+        <e p="fps_counter.cs" t="Include" />
+        <e p="ModelChief_MapAI.cs" t="Include" />
+        <e p="ModelChiefMain.cs" t="Include" />
+        <e p="ModelPoint.cs" t="Include" />
+        <e p="ModelPointAI.cs" t="Include" />
+        <e p="ModelPointMono.cs" t="Include" />
+        <e p="ModelWorker_Map.cs" t="Include" />
+        <e p="ModelWorker_MapAI.cs" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DemiLib" t="Include">
+              <e p="Core" t="Include">
+                <e p="DemiLib.xml" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DemiEditor.xml" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+          <e p="MoreLinq311" t="Include">
+            <e p="MoreLinq.xml" t="Include" />
+          </e>
+          <e p="Trinary Software" t="Include">
+            <e p="Threading Examples" t="Include">
+              <e p="FileTest.cs" t="Include" />
+              <e p="SanityTest.cs" t="Include" />
+              <e p="SwarmTest.cs" t="Include" />
+            </e>
+            <e p="Threading.cs" t="Include" />
+            <e p="Timing.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ProcessorMoveBezier_ActorsParallel.cs" t="Include" />
+        <e p="ProcessorMoveBezier_Clear.cs" t="Include" />
+        <e p="ProcessorMoveBezier_ParallelFor.cs" t="Include" />
+        <e p="ProcessorMoveBezierNOT_job.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="DataGame.cs" t="Include" />
+          <e p="DataResources.cs" t="Include" />
+        </e>
+        <e p="Source" t="Include">
+          <e p="Runtime" t="Include">
+            <e p="Common" t="Include">
+              <e p="Model.cs" t="Include" />
+              <e p="Tag.cs" t="Include" />
+            </e>
+            <e p="PlugConsole" t="Include">
+              <e p="CommandsConsole.cs" t="Include" />
+              <e p="CommandsGame.cs" t="Include" />
+              <e p="ComponentConsole.cs" t="Include" />
+              <e p="PluggableConsole.cs" t="Include" />
+              <e p="ProcessorConsole.cs" t="Include" />
+              <e p="Resources" t="Include">
+                <e p="Shader Console Blur.shader" t="Include" />
+              </e>
+            </e>
+            <e p="StarterGame.cs" t="Include" />
+          </e>
+        </e>
+        <e p="StarterMain.cs" t="Include" />
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Zero.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Pixeye.Source.csproj" t="IncludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="TEST_MultiThreading2.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
