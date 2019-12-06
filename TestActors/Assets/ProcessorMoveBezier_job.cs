@@ -31,6 +31,7 @@ public class ProcessorMoveBezier_job : Processor, ITick
 	int index;
 	protected override void OnDispose()
 	{
+		handlePositionUpdate.Complete();
 		nSetMove.Dispose();
 		transformsAccessArray.Dispose();
 	}
@@ -45,7 +46,6 @@ public class ProcessorMoveBezier_job : Processor, ITick
 
 	public override void HandleEvents()
 	{
-
 		foreach (ent entity in groupMoveBezier.added)
 		{
 			var cObject = entity.ComponentObject();
@@ -77,6 +77,8 @@ public class ProcessorMoveBezier_job : Processor, ITick
 			
 			index++;
 		}
+		
+		transformsAccessArray.SetTransforms(transforms);
 	}
 	
 
@@ -107,7 +109,6 @@ public class ProcessorMoveBezier_job : Processor, ITick
 		jobPositionUpdate.nSetMove = nSetMove;
 		jobPositionUpdate.nObj = nObj;
 		jobPositionUpdate.deltaTime = delta;
-		transformsAccessArray.SetTransforms(transforms);
 		handlePositionUpdate = jobPositionUpdate.Schedule(transformsAccessArray);
 	}
 }
