@@ -2,13 +2,14 @@
  
 тест акторсов на классах-компонентах. 
 
--настройки дефолтные для IL2CPP только включена галка на GC experimental. строчка scripting define ACTORS_TAGS_6; (все эти настройки в tools->Actors меню эдитора можно отключить\включить)
+- настройки дефолтные для IL2CPP только включена галка на GC experimental. 
+- строчка scripting define ACTORS_TAGS_6; (все эти настройки в tools->Actors меню эдитора можно отключить\включить)
 
 
--- тест MonoBehaviour sequential поставить самой верхней в билде сцену TestMono
--- тест Actors поставить самой верхней в билде сцену TestActors
--- тест Actors + Parallel.For поставить самой верхней в билде сцену TestActorsParallelFor
--- тест Actors + TestActors_jobs поставить самой верхней в билде сцену TestActors_jobs
+- тест MonoBehaviour sequential поставить самой верхней в билде сцену TestMono
+- тест Actors поставить самой верхней в билде сцену TestActors
+- тест Actors + Parallel.For поставить самой верхней в билде сцену TestActorsParallelFor
+- тест Actors + TestActors_jobs поставить самой верхней в билде сцену TestActors_jobs
 
 ..
 - выставляются объекты в скриптах с соответствующим названием ModelChief[---] в ресурсах. количество обьектов на сцене задается в allNumberObj = 50000;
