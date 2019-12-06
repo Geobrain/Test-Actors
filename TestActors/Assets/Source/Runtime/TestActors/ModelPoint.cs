@@ -1,14 +1,10 @@
-﻿using Common;
-using Pixeye.Actors;
-using Unity.Mathematics;
-using UnityEngine;
-using Rand = Common.Rand;
+﻿using Pixeye.Actors;
 
 sealed partial class Model
 {
     public static void Point(in ent entity)
     {
-        var cObject = entity.Set<ComponentObject>();
+        ref var cObject = ref entity.Set<ComponentObject>();
         cObject.SetCache(entity);
     }
 

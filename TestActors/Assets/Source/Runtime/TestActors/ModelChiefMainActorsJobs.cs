@@ -11,7 +11,7 @@ sealed partial class Model
     public static void ChiefMainActorsJobs(in ent chief)
     {
 
-        var allNumberObj = 50000;
+        var allNumberObj = DataGame.Use.numberObjInScene;
 
         GameObject goParent = new GameObject();
         goParent.name = "Pack" + 0;

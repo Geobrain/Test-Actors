@@ -10,7 +10,7 @@ sealed partial class Model
 {
     public static void ChiefMainActorsParallelFor(in ent chief)
     {
-        var allNumberObj = 50000;
+        var allNumberObj = DataGame.Use.numberObjInScene;
         
         int num = 0;
         do

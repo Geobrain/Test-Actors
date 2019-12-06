@@ -1,4 +1,3 @@
-using Common;
 using Pixeye.Actors;
 using Unity.Mathematics;
 using UnityEngine;
@@ -11,7 +10,7 @@ sealed partial class Model
     public static void ChiefMainActors(in ent chief)
     {
 
-            var allNumberObj = 50000;
+            var allNumberObj = DataGame.Use.numberObjInScene;
             
             int num = 0;
             do

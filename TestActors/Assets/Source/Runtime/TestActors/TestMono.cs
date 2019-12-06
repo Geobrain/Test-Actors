@@ -6,7 +6,8 @@ public class TestMono : MonoBehaviour
 
     void Start()
     {
-        var allNumberObj = 50000;
+        DataGame.Use = (DataGame) Pixeye.Actors.Box.Load<ScriptableObject>("DataGame");
+        var allNumberObj = DataGame.Use.numberObjInScene;
         
         int num = 0;
         do

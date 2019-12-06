@@ -11,8 +11,6 @@ namespace Common
 	
 	public class Chief : Actor
 	{
-
-
 		protected override void Setup()
 		{
 			entity.Set(global::Tag.TypeChief);

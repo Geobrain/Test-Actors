@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 
-public sealed class ComponentObject
+public class ComponentObject
 {
 	public Transform tr;
 	// размер LocalScale для обьектов с канвасом

@@ -4,7 +4,7 @@ using Pixeye.Actors;
 using Unity.Mathematics;
 using UnityEngine;
 
-public sealed class ComponentMoveBezier
+public class ComponentMoveBezier
 {
 	public float2x3 posToMove;
 	

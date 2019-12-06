@@ -38,8 +38,8 @@ public class ProcessorMoveBezier_ParallelFor: Processor, ITick
 		Parallel.For(0, groupMoveBezier.length, i =>
 		{
 			ref var entity = ref groupMoveBezier[i];
-			var cMoveBezier = entity.ComponentMoveBezier();
-			var cObject = entity.ComponentObject();
+			ref var cMoveBezier = ref entity.ComponentMoveBezier();
+			ref var cObject = ref entity.ComponentObject();
 			ref var obj = ref cObject.obj;
 			
 			// расчет новой точки
