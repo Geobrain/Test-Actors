@@ -10,10 +10,8 @@ namespace Common
         protected override void Setup()
         {
             Rand.rnd = new Unity.Mathematics.Random((uint) Random.Range(1, 10000));
-            
             DataGame.Use = (DataGame) Pixeye.Actors.Box.Load<ScriptableObject>("DataGame");
-
-            if (DataGame.Use.numberObjInScene == 0) DataGame.Use.numberObjInScene = 1;
+            //if (DataGame.Use.numberObjInScene == 0) DataGame.Use.numberObjInScene = 1;
         }
 
 
