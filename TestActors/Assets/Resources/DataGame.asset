@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2e797d2198f7f43aca948f9e308de1, type: 3}
   m_Name: DataGame
   m_EditorClassIdentifier: 
-  numberObjInScene: 0
+  numberObjInScene: 50000
