@@ -1,0 +1,4 @@
+﻿<linker>
+       <assembly fullname="Pixeye.Actors" preserve="all"/>
+	   <assembly fullname="Pixeye.Source" preserve="all"/>
+</linker>
