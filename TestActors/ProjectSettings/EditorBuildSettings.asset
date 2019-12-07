@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestActorsThreaded.unity
     guid: ffd04ca7997fe3e4f85148b8c1408578
+  - enabled: 1
+    path: Assets/Scenes/TestActors_jobs2.unity
+    guid: df4d0685b862f3b4bb77f285aab0c44f
   m_configObjects: {}
