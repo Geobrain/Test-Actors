@@ -19,9 +19,9 @@ public class ProcessorMoveBezier_job : Processor, ITick
 	public float sidePosMultMax = 1.1f;
 	
 	Group<ComponentMoveBezier> groupMoveBezier;
-	
-    NativeArray<SetMove> nSetMove = new NativeArray<SetMove>(DataGame.Use.numberObjInScene+1, Allocator.Persistent);
-    NativeArray<Obj> nObj = new NativeArray<Obj>(DataGame.Use.numberObjInScene+1, Allocator.Persistent);
+
+	private NativeArray<SetMove> nSetMove;
+	private NativeArray<Obj> nObj;
     TransformAccessArray transformsAccessArray;
 	Transform[] transforms;
 	JobPositionUpdate jobPositionUpdate;
@@ -41,6 +41,9 @@ public class ProcessorMoveBezier_job : Processor, ITick
 	{
 		transforms = new Transform[DataGame.Use.numberObjInScene+1];
 		transformsAccessArray = new TransformAccessArray(0);
+
+		nSetMove = new NativeArray<SetMove>(DataGame.Use.numberObjInScene+1, Allocator.Persistent);
+		nObj = new NativeArray<Obj>(DataGame.Use.numberObjInScene+1, Allocator.Persistent);
 	}
 
 

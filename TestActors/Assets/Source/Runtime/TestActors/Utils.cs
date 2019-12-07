@@ -21,8 +21,8 @@ public static class Utils
         float alpha = 1f;
         float beta = 0.25f;
 
-        float abs_inphase = Math.Abs(a.x - b.x);
-        float abs_quadrature = Math.Abs(a.y - b.y);
+        float abs_inphase = math.abs(a.x - b.x);
+        float abs_quadrature = math.abs(a.y - b.y);
         
         return abs_inphase > abs_quadrature ?
               alpha * abs_inphase + beta * abs_quadrature
@@ -37,7 +37,7 @@ public static class Utils
         float angles;
         float sinyCosp = +2.0f * (q.value.w * q.value.z + q.value.x * q.value.y);
         float cosyCosp = +1.0f - 2.0f * (q.value.y * q.value.y + q.value.z * q.value.z);
-        angles = Mathf.Atan2(sinyCosp, cosyCosp); 
+        angles = math.atan2(sinyCosp, cosyCosp);
         return angles * 180f;
     }
     
@@ -46,9 +46,10 @@ public static class Utils
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float2 PosToRadius(this float2 p0, float currentRadius)
     {
-        float rad = Rand.rnd.NextFloat(0, 360) * Mathf.Deg2Rad;
-        float p1x = currentRadius * Mathf.Cos(rad) + p0.x;
-        float p1y = currentRadius * Mathf.Sin(rad) + p0.y;
+        float rad = math.radians(Rand.rnd.NextFloat(0, 360));
+        math.sincos(rad, out var s, out var c);
+        float p1x = currentRadius * c + p0.x;
+        float p1y = currentRadius * s + p0.y;
         return new float2(p1x, p1y);
     }
     
@@ -63,8 +64,9 @@ public static class Utils
         //Т.е. это точка сверху или снизу(случайно) строго от центра пути. На расстоянии в полпути от пути
         var rx = endPos.x - trPx.x;
         var ry = endPos.y - trPx.y;
-        var alpha = Rand.rnd.NextBool() ? 90 * Mathf.Deg2Rad : 270 * Mathf.Deg2Rad;
-        return new float2(trPx.x + rx * Mathf.Cos(alpha) - ry * Mathf.Sin(alpha), trPx.y + rx * Mathf.Sin(alpha) + ry * Mathf.Cos(alpha));
+        var alpha = math.radians(Rand.rnd.NextBool() ? 90 : 270);
+        math.sincos(alpha, out var s, out var c);
+        return new float2(trPx.x + rx * c - ry * s, trPx.y + rx * s + ry * c);
     } 
     
     // B(t) = (1-t)2P0 + 2(1-t)tP1 + t2P2
@@ -75,7 +77,7 @@ public static class Utils
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static float2 CalculateBesierPos(this float t, float2 p0, float2 p1, float2 p2)
     {
-        return Mathf.Pow(1 - t, 2) * p0 + 2 * (1 - t) * t * p1 + Mathf.Pow(t, 2) * p2;
+        return (1 - t)*(1 - t) * p0 + 2 * (1 - t) * t * p1 + t*t * p2;
     }
     
 }
@@ -87,9 +89,10 @@ public static partial class UtilsMono
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static float2 PosToRadiusMONO(this float2 p0, float currentRadius)
 	{
-		float rad = Random.Range(0, 360) * Mathf.Deg2Rad;
-		float p1x = currentRadius * Mathf.Cos(rad) + p0.x;
-		float p1y = currentRadius * Mathf.Sin(rad) + p0.y;
+		float rad = math.radians(Random.Range(0, 360));
+		math.sincos(rad, out var s, out var c);
+		float p1x = currentRadius * c + p0.x;
+		float p1y = currentRadius * s + p0.y;
 		return new float2(p1x, p1y);
 	}
 	
@@ -104,8 +107,9 @@ public static partial class UtilsMono
 		//Т.е. это точка сверху или снизу(случайно) строго от центра пути. На расстоянии в полпути от пути
 		var rx = endPos.x - trPx.x;
 		var ry = endPos.y - trPx.y;
-		var alpha = Random.Range(0f, 1f) < 0.5f ? 90 * Mathf.Deg2Rad : 270 * Mathf.Deg2Rad;
-		return new float2(trPx.x + rx * Mathf.Cos(alpha) - ry * Mathf.Sin(alpha), trPx.y + rx * Mathf.Sin(alpha) + ry * Mathf.Cos(alpha));
+		var alpha = math.radians(Random.Range(0f, 1f) < 0.5f ? 90 : 270);
+		math.sincos(alpha, out var s, out var c);
+		return new float2(trPx.x + rx * c - ry * s, trPx.y + rx * s + ry * c);
 	} 
 	
 	// B(t) = (1-t)2P0 + 2(1-t)tP1 + t2P2
@@ -116,7 +120,7 @@ public static partial class UtilsMono
 	[MethodImpl(MethodImplOptions.AggressiveInlining)]
 	public static float2 CalculateBesierPosMONO(this float t, float2 p0, float2 p1, float2 p2)
 	{
-		return Mathf.Pow(1 - t, 2) * p0 + 2 * (1 - t) * t * p1 + Mathf.Pow(t, 2) * p2;
+		return (1 - t)*(1 - t) * p0 + 2 * (1 - t) * t * p1 + t*t * p2;
 	}
 
 }
@@ -149,8 +153,8 @@ public static partial class UtilsCollBox
 	{
 		var newPos = new float2();
 		var inBoxSizeHalf = newBoxSize * 0.5f;
-		newPos.x = Mathf.Clamp(pos.x, outBox.vertex.c0.x + inBoxSizeHalf.x, outBox.vertex.c2.x - inBoxSizeHalf.x);
-		newPos.y = Mathf.Clamp(pos.y, outBox.vertex.c0.y + inBoxSizeHalf.y, outBox.vertex.c2.y - inBoxSizeHalf.y);
+		newPos.x = math.clamp(pos.x, outBox.vertex.c0.x + inBoxSizeHalf.x, outBox.vertex.c2.x - inBoxSizeHalf.x);
+		newPos.y = math.clamp(pos.y, outBox.vertex.c0.y + inBoxSizeHalf.y, outBox.vertex.c2.y - inBoxSizeHalf.y);
 		return entity.NewBox(newPos, newBoxSize, eulerAngleZ);
 	}
 	
