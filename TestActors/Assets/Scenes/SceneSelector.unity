@@ -681,7 +681,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Default 50 000
+  m_Text: "\u0412\u0432\u0435\u0441\u0442\u0438 \u0447\u0438\u0441\u043B\u043E \u043E\u0431\u044C\u0435\u043A\u0442\u043E\u0432
+    [Default 1]"
 --- !u!222 &1097220242
 CanvasRenderer:
   m_ObjectHideFlags: 0

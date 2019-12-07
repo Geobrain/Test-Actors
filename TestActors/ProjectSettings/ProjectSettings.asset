@@ -553,7 +553,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: ACTORS_TAGS_12
+    1: ACTORS_TAGS_6
   platformArchitecture: {}
   scriptingBackend:
     Standalone: 1
